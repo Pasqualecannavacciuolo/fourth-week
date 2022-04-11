@@ -4,6 +4,6 @@ import { NgModule } from '@angular/core';
 
 @NgModule({
   imports: [CommonModule, MatToolbarModule],
-  exports: []
+  exports: [CommonModule, MatToolbarModule]
 })
 export class AppModule { }
