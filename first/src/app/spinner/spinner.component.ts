@@ -5,4 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.css']
 })
-export class SpinnerComponent{}
+export class SpinnerComponent implements OnInit{
+  
+  isHide: boolean = false;
+
+  ngOnInit(): void {
+    setTimeout(()=>{
+      this.isHide = true;
+    }, 5000);
+  }
+}
