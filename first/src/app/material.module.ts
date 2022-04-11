@@ -6,4 +6,4 @@ import { NgModule } from '@angular/core';
   imports: [CommonModule, MatToolbarModule],
   exports: [CommonModule, MatToolbarModule]
 })
-export class AppModule { }
+export class MaterialModule { }
