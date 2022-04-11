@@ -1,5 +1,2 @@
-<div>
-    Il nome del progetto è: {{ title }}
-</div>
-
-<app-spinner></app-spinner>
+<app-toolbar *ngIf="isHide"></app-toolbar>
+<app-spinner *ngIf="!isHide"></app-spinner>
