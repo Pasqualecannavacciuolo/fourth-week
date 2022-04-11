@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
+import { AppComponent } from './app.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { TableDataComponent } from './table-data/table-data.component';
+import { GridListComponent } from './grid-list/grid-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpinnerComponent,
     ToolbarComponent,
-    TableDataComponent
+    GridListComponent
   ],
   imports: [
     BrowserModule,
