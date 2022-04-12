@@ -1,0 +1,22 @@
+<div ngClass="money-container">
+    <h1 ngClass="money">{{ balance }}€</h1>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="gbp" (click)="conditionA = !conditionA">GBP</mat-button-toggle>
+        <mat-button-toggle value="usd" (click)="conditionB = !conditionB">USD</mat-button-toggle>
+        <mat-button-toggle value="cad" (click)="conditionC = !conditionC">CAD</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+<div class="currency-list">
+    <div class="currency-list-container">
+        <div class="list-item">
+            <p *appUnless="conditionA" class="unless a" [ngStyle]="{color: 'aliceblue'}">
+                EUR - GBP: {{ 1000 | Conversion: '0.89' }} £
+            </p>
+            <p *appUnless="conditionB" class="unless a" [ngStyle]="{color: 'aliceblue'}">
+                EUR - USD: {{ 1000 | Conversion: '1.09' }} $
+            </p>
+            <p *appUnless="conditionC" class="unless a" [ngStyle]="{color: 'aliceblue'}">
+                EUR - USD: {{ 1000 | Conversion: '1.37' }} $CAD
+        </div>
+    </div>
+</div>

@@ -1,13 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'Multiplier'
+  name: 'Conversion'
 })
-export class MultiplierPipe implements PipeTransform {
+export class ConversionPipe implements PipeTransform {
 
   transform(value: number, ...args: string[]): unknown {
     let mult = parseFloat(args[0]);
     return mult * value;
   }
-
 }
