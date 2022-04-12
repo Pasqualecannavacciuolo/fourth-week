@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CcHoverDirective } from './cc-hover.directive';
+import { UnlessDirective } from './unless.directive';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ToolbarComponent,
     HeroImageComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    CcHoverDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

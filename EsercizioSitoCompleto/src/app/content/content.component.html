@@ -7,7 +7,7 @@
     </div>
 
 
-    <div class="form-container">
+    <div class="form-container" (click)="condition = !condition">
         <form novalidate (submit)="submit()" #f>
             <mat-form-field hintLabel="Max 25 characters" appearance="fill">
                 <mat-label>Name</mat-label>
@@ -25,7 +25,10 @@
                     <mat-option value="two">Second option</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button mat-raised-button [ngStyle]="{background: '#3fb568'}" type="submit" [ngClass]="getClass()" *ngIf="hide">Submit</button>
+            <button mat-raised-button type="submit" [ngClass]="getClass()" *ngIf="hide" appCcHover>Submit</button>
         </form>
     </div>
+    <p *appUnless="condition" class="unless a">
+        (A) This paragraph is displayed because the condition is false.
+    </p>
 </div>
