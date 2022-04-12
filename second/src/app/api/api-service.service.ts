@@ -21,8 +21,8 @@ export class ApiServiceService<K> {
     return this.http.put<K>(path, body);
   }
 
-  delete(path: string, body: K): Observable<K> {
-    return this.http.delete<K>(path, body);
+  delete(path: string): Observable<K> {
+    return this.http.delete<K>(path);
   }
 
 }

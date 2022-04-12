@@ -19,19 +19,16 @@
       "id": 27
     },
     {
-      "label": "Tablet GooApple2",
-      "os": "others",
-      "price": 250,
-      "rate": 3,
-      "memory": 2500,
-      "desc": "",
-      "id": 24
+      "label": "Motorola G67",
+      "price": 678,
+      "os": "android",
+      "id": 30
     },
     {
-      "label": "iPhone 13 Pro",
-      "price": 1450,
-      "os": "ios",
-      "id": 29
+      "label": "Nokia 3311",
+      "price": 100,
+      "os": "others",
+      "id": 31
     }
   ],
   "login": {
