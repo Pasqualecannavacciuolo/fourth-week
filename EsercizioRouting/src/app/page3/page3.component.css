@@ -1,0 +1,9 @@
+.title {
+    text-align: center;
+}
+
+.button-wrapper {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+}

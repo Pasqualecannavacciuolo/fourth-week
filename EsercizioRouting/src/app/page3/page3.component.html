@@ -1,0 +1,5 @@
+<h2 [ngClass]="['title']">Un bel cane</h2>
+<div [ngClass]="['button-wrapper']">
+    <button mat-button type="submit" (click)="clicked()" [ngStyle]="{'background-color': 'slateblue','color': 'aliceblue', 'margin': '0 auto'}" *ngIf="hide" [routerLink]="['pageChildren']">Mostra Cane</button>
+</div>
+<router-outlet></router-outlet>
