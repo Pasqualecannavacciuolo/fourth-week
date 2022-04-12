@@ -11,6 +11,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CcHoverDirective } from './cc-hover.directive';
 import { UnlessDirective } from './unless.directive';
+import { MultiplierPipe } from './multiplier.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { UnlessDirective } from './unless.directive';
     ContentComponent,
     FooterComponent,
     CcHoverDirective,
-    UnlessDirective
+    UnlessDirective,
+    MultiplierPipe
   ],
   imports: [
     BrowserModule,
