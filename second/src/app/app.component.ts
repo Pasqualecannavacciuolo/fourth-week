@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Device } from './model/device';
 import { NgForm } from '@angular/forms';
+import { ApiServiceService } from './api/api-service.service';
 
 const INITIAL_STATE = { label: null, os: null };
 
@@ -14,7 +15,7 @@ export class AppComponent {
   devices: Device[] = [];
   active: any = INITIAL_STATE;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private apiService: ApiServiceService<any>) {
     // console.log ('environment:', env);
     this.getAll();
   }
