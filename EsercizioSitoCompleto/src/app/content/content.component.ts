@@ -32,4 +32,5 @@ export class ContentComponent implements OnInit {
   getClass(): string {
     return 'clicked';
   }
+
 }
