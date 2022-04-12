@@ -10,13 +10,13 @@
     <div class="currency-list-container">
         <div class="list-item">
             <p *appUnless="conditionA" class="unless a" [ngStyle]="{color: 'aliceblue'}">
-                EUR - GBP: {{ 1000 | Conversion: '0.89' }} £
+                EUR - GBP: {{ balance | Conversion: '0.89' }} £
             </p>
             <p *appUnless="conditionB" class="unless a" [ngStyle]="{color: 'aliceblue'}">
-                EUR - USD: {{ 1000 | Conversion: '1.09' }} $
+                EUR - USD: {{ balance | Conversion: '1.09' }} $
             </p>
             <p *appUnless="conditionC" class="unless a" [ngStyle]="{color: 'aliceblue'}">
-                EUR - USD: {{ 1000 | Conversion: '1.37' }} $CAD
+                EUR - USD: {{ balance | Conversion: '1.37' }} $CAD
         </div>
     </div>
 </div>
