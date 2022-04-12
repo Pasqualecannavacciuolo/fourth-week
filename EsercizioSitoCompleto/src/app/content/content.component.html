@@ -1,1 +1,31 @@
-<p>content works!</p>
+<div class="content-container">
+
+    <div class="list-container">
+        <ul>
+            <li *ngFor="let element of lista2">{{element}}</li>
+        </ul>
+    </div>
+
+
+    <div class="form-container">
+        <form novalidate (submit)="submit()" #f>
+            <mat-form-field hintLabel="Max 25 characters" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput #input maxlength="25" placeholder="Insert name...">
+            </mat-form-field>
+            <mat-form-field hintLabel="Max 25 characters" appearance="fill">
+                <mat-label>LastName</mat-label>
+                <input matInput #input maxlength="35" placeholder="Insert lastname...">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select>
+                    <mat-option value="one">First option</mat-option>
+                    <mat-option value="two">Second option</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button [ngStyle]="{background: '#3fb568'}" type="submit">Submit</button>
+        </form>
+    </div>
+</div>

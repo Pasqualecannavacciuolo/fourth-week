@@ -12,4 +12,19 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Doppio metodo di implementazione
+  lista = [    
+    { id: 1, content: 'Mela' },    
+    { id: 2, content: 'Pera' },    
+    { id: 3, content: 'Arancia' },  
+    { id: 3, content: 'Cannella' },  
+  ];
+
+  lista2 = ["Mela", "Pera", "Arancia", "Cannella"];
+
+  submit() {
+    alert("Form inviato");
+  }
+
+
 }
