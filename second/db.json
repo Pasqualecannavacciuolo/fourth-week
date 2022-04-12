@@ -28,12 +28,6 @@
       "id": 24
     },
     {
-      "label": "Tablet GooApple3",
-      "id": 28,
-      "price": 98,
-      "os": "others"
-    },
-    {
       "label": "iPhone 13 Pro",
       "price": 1450,
       "os": "ios",
