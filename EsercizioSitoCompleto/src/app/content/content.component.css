@@ -14,3 +14,8 @@
 .form-container {
     width: 50%;
 }
+
+.clicked {
+    background-color: slateblue;
+    color: aliceblue;
+}

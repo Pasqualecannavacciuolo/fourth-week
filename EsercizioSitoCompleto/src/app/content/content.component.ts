@@ -22,9 +22,14 @@ export class ContentComponent implements OnInit {
 
   lista2 = ["Mela", "Pera", "Arancia", "Cannella"];
 
+  hide: boolean= true;
+
   submit() {
     alert("Form inviato");
+    this.hide = false;
   }
 
-
+  getClass(): string {
+    return 'clicked';
+  }
 }
