@@ -1,3 +1,9 @@
+.app-money {
+    background-color: #1976d2;
+    padding: 100px;
+    border-radius: 10px;
+}
+
 .money {
     text-align: center;
     color: aliceblue;
