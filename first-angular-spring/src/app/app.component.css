@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+
+.example-card {
+    max-width: 400px;
+    background-color: rgb(198, 205, 212);
+}
+
+.example-header-image {
+    background-image: url('https://i.pinimg.com/originals/03/50/c3/0350c3dc07bbcfca009c15747d9a3d2d.jpg');
+    background-size: cover;
+}
+
+.warn {
+    background-color: rgb(242, 82, 64);
+    color: aliceblue;
+    font-weight: bold;
+}

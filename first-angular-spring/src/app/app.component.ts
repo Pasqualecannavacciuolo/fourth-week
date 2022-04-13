@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { Component, Output } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Student } from './model/student';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -8,14 +10,41 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  displayedColumns: string[] = ['Brand', 'Model', 'Color', 'CV'];
   title = 'first-angular-spring';
-  cars: any[] = [];
 
-  constructor(private httpClient: HttpClient){
-    this.httpClient.get<any>("http://localhost:8080/api/v1/carList").subscribe((e) => {  
-    console.log(e)
-  this.cars = e
-});
+  displayedColumns: string[] = ['Name', 'LastName', 'Country', 'Age'];
+  dataSource: Student[] = [];
+  italianStudents: Student[] = [];
+  showITAStudents = false;
+  showOldest = false;
+  oldestStudent!: Student;
+
+  constructor(private http: HttpClient) {
+    this.getAll();
   }
+
+  getAll() {
+    this.http
+      .get<Student[]>('http://localhost:8080/api/v1/studentsList')
+      .subscribe((result) => this.dataSource = result);
+  }
+
+  printItalians() {
+    this.showITAStudents = true;
+    this.http
+      .get<Student[]>('http://localhost:8080/api/v1/italianStudents')
+      .subscribe((result) => this.italianStudents = result);
+  }
+
+  printOldest() {
+    this.showOldest = true;
+    this.http
+      .get<Student>('http://localhost:8080/api/v1/oldestStudent')
+      .subscribe((result) => this.oldestStudent = result);
+  }
+
+  hideCard() {
+    this.showOldest = false;
+  }
+  
 }
