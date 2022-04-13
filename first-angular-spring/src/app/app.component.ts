@@ -12,6 +12,9 @@ export class AppComponent {
   users: any[] = [];
 
   constructor(private httpClient: HttpClient){
-    this.httpClient.get<any>("http://localhost:8080/api/v1/all").subscribe((e) => console.log(e));
+    this.httpClient.get<any>("http://localhost:8080/api/v1/all").subscribe((e) => {  
+    console.log(e)
+  this.users = e
+});
   }
 }
