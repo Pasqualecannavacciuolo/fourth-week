@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { PrintTableComponent } from './print-table/print-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrintTableComponent
   ],
   imports: [
     BrowserModule,

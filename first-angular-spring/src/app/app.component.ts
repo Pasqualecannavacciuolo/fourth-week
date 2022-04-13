@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Student } from './model/student';
 import { FormGroup } from '@angular/forms';
@@ -13,9 +13,13 @@ export class AppComponent {
   title = 'first-angular-spring';
 
   displayedColumns: string[] = ['Name', 'LastName', 'Country', 'Age'];
+
   dataSource: Student[] = [];
-  italianStudents: Student[] = [];
+
+  @Input() italianStudents: Student[] = [];
   showITAStudents = false;
+  italianBtnClicked = false;
+
   showOldest = false;
   oldestStudent!: Student;
 
@@ -30,6 +34,7 @@ export class AppComponent {
   }
 
   printItalians() {
+    this.italianBtnClicked = true;
     this.showITAStudents = true;
     this.http
       .get<Student[]>('http://localhost:8080/api/v1/italianStudents')
