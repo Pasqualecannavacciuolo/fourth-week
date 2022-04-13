@@ -8,13 +8,14 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  displayedColumns: string[] = ['Brand', 'Model', 'Color', 'CV'];
   title = 'first-angular-spring';
-  users: any[] = [];
+  cars: any[] = [];
 
   constructor(private httpClient: HttpClient){
-    this.httpClient.get<any>("http://localhost:8080/api/v1/all").subscribe((e) => {  
+    this.httpClient.get<any>("http://localhost:8080/api/v1/carList").subscribe((e) => {  
     console.log(e)
-  this.users = e
+  this.cars = e
 });
   }
 }
