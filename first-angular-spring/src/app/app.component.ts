@@ -17,6 +17,8 @@ export class AppComponent {
   dataSource: Student[] = [];
 
   @Input() italianStudents: Student[] = [];
+  btn = document.getElementById('ITAbtn');
+  @Input() show = false;
   showITAStudents = false;
   italianBtnClicked = false;
 
@@ -32,8 +34,9 @@ export class AppComponent {
       .get<Student[]>('http://localhost:8080/api/v1/studentsList')
       .subscribe((result) => this.dataSource = result);
   }
-
+  
   printItalians() {
+    this.show = true
     this.italianBtnClicked = true;
     this.showITAStudents = true;
     this.http

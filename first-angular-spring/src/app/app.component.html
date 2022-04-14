@@ -358,9 +358,9 @@
     <button [ngStyle]="{'background-color': '#1976d2', 'color': 'aliceblue', 'font-weight': 'bold', 'margin': '50px'}" mat-raised-button color="primary" (click)="printItalians()">FIND ITALIANS</button>
 
 
-    <app-print-table [italianStudents]="italianStudents"></app-print-table>
+    <app-print-table [italianStudents]="italianStudents" [show]="show"></app-print-table>
 
-    <button [ngStyle]="{'background-color': '#1976d2', 'color': 'aliceblue', 'font-weight': 'bold', 'margin': '50px'}" mat-raised-button color="primary" (click)="printOldest()">FIND OLDEST</button>
+    <button id="'ITAbtn'" [ngStyle]="{'background-color': '#1976d2', 'color': 'aliceblue', 'font-weight': 'bold', 'margin': '50px'}" mat-raised-button color="primary" (click)="printOldest()">FIND OLDEST</button>
 
     <div *ngIf="showOldest">
         <mat-card class="example-card">

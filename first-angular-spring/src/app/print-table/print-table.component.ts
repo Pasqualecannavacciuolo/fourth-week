@@ -15,4 +15,5 @@ export class PrintTableComponent implements OnInit {
   displayedColumns: string[] = ['Name', 'LastName', 'Country', 'Age'];
 
   @Input() italianStudents: Student[] = [];
+  @Input() show = false;
 }
