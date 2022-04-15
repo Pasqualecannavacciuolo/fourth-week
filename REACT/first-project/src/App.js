@@ -3,6 +3,12 @@ import './App.css';
 import Link from './Link';
 
 function App() {
+
+  const obj = {
+    name: "Pasquale",
+    lastname: "Cannavacciuolo"
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Link />
+      <Link obj={obj} />
     </div>
   );
 }
